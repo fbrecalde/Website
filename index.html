@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desarrollo web - diseño Gráfico</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/mymodal.css?v=1">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+
+
+    <link rel="icon" href="img/jon.ico" type="image/x-icon">
+
+
+</head>
+
+<body class="hidden">
+    <div id="my-modal">
+        <button type="button" onclick="closeModal()">x</button>
+        <div>
+
+        </div>
+    </div>
+    <div class="centrado" id="onload">
+        <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <header>
+
+        <nav id="nav" class="nav1">
+            <div class="contenedor-nav">
+                <div class="logo">
+                    <img src="img/jo.png" alt="">
+                </div>
+                <div class="enlaces" id="enlaces">
+                    <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
+                    <a href="#servicio" id="enlace-servicio" class="btn-header">Servicios</a>
+                    <a href="#trabajo" id="enlace-trabajo" class="btn-header">Trabajos</a>
+                    <a href="#contacto" id="enlace-contacto" class="btn-header">Contacto</a>
+                </div>
+                <div class="icono" id="open">
+                    <span>&#9776;</span>
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="slide-contenedor1">
+            <div class="miSlider fade">
+                <img src="img/core.jpg" alt="">
+            </div>
+            <div class="miSlider fade">
+                <img src="img/wal.jpg" alt="">
+            </div>
+
+            <div class="direcciones">
+                <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+                <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+            </div>
+            <div class="barras">
+                <span class="barra active" onclick="posicionSlide(1)"></span>
+                <span class="barra" onclick="posicionSlide(2)"></span>
+
+            </div>
+        </div>
+
+        <section class="team contenedor" id="servicio">
+            <h3>SERVICIOS</h3>
+            <p class="after ">Creamos soluciones que se adaptan
+                <br>a las necesidades específicas de tu empresa</p>
+            <div class="card ">
+                <div class="content-card ">
+                    <div class="people ">
+                        <img src="img/3.jpg " alt=" ">
+                    </div>
+                    <div class="texto-team ">
+                        <h4>DISEÑOS DE PAGINAS WEB</h4>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="content-card ">
+                    <div class="people ">
+                        <img src="img/wal.jpg " alt=" ">
+                    </div>
+                    <div class="texto-team ">
+                        <h4>DISEÑO GRÁFICO A MEDIDA</h4>
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="about " id="about">
+            <div class="contenedor ">
+                <h3>CARACTERÍSTICAS DE NUESTRAS SOLUCIONES</h3>
+                <p class="after ">Siempre mejorando para ti</p>
+                <div class="servicios ">
+                    <div class="caja-servicios ">
+                        <img src="img/heart.png " alt=" ">
+                        <h4>SOPORTE PERMANENTE</h4>
+                        <p></p>
+                    </div>
+                    <div class="caja-servicios ">
+                        <img src="img/responsive.png " alt=" ">
+                        <h4>ACCESO DESDE CUALQUIER LUGAR Y DISPOSITIVO</h4>
+                        <p></p>
+                    </div>
+                    <div class="caja-servicios ">
+                        <img src="img/efectos.png " alt=" ">
+                        <h4>DISEÑO INTUITIVO</h4>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="work contenedor " id="trabajo">
+            <h3>TRABAJOS REALIZADOS</h3>
+            <p class="after ">Hacemos de algo simple algo extraordinario</p>
+            <div class="botones-work ">
+                <ul>
+                    <li class="filter active " data-nombre='todos'>Todos</li>
+                    <li class="filter " data-nombre='diseño'>Diseño Gráfico</li>
+                    <li class="filter " data-nombre='programacion'>Paginas Web</li>
+
+                </ul>
+            </div>
+            <div class="galeria-work ">
+                <div class="cont-work programacion ">
+                    <div class="img-work ">
+                        <img src="img/1.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Paginas Web</h4>
+                    </div>
+                </div>
+                <div class="cont-work programacion ">
+                    <div class="img-work ">
+                        <img src="img/2.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Paginas Web</h4>
+                    </div>
+                </div>
+                <div class="cont-work programacion ">
+                    <div class="img-work ">
+                        <img src="img/3.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Paginas Web</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño ">
+                    <div class="img-work ">
+                        <img onclick="showModal(this)" src="img/diseño1.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Diseño Gráfico</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño ">
+                    <div class="img-work ">
+                        <img src="img/diseño2.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Diseño Gráfico</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño ">
+                    <div class="img-work ">
+                        <img src="img/diseño3.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Diseño Gráfico</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño ">
+                    <div class="img-work ">
+                        <img src="img/diseño4.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Diseño Gráfico</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño ">
+                    <div class="img-work ">
+                        <img src="img/diseño5.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Diseño Gráfico</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño ">
+                    <div class="img-work ">
+                        <img src="img/diseño6.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Diseño Gráfico</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño ">
+                    <div class="img-work ">
+                        <img src="img/diseño7.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Diseño Gráfico</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño ">
+                    <div class="img-work ">
+                        <img src="img/diseño8.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Diseño Gráfico</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño ">
+                    <div class="img-work ">
+                        <img src="img/diseño9.jpg " alt=" ">
+                    </div>
+                    <div class="textos-work ">
+                        <h4>Diseño Gráfico</h4>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+    </main>
+    <footer id="contacto">
+        <div class="footer contenedor ">
+            <div class="marca-logo ">
+                <img src="img/jo.png " alt=" ">
+            </div>
+
+
+            <div class="iconos ">
+
+
+
+                <a href="https://www.facebook.com/profile.php?id=100064238377045 " target="_blank "><i
+                        class="fab fa-facebook-square "></i></a>
+
+                <a href="https://api.whatsapp.com/send?phone=595981614153&amp;text=Hola, estoy escribiendo desde el Sitio de Jon Walter Recalde. " target="_blank ">
+                    <i class="fab fa-whatsapp "></i>
+                </a>
+
+            </div>
+
+            <p style="font-size: 18px; color:black;font-weight: bold;text-shadow: 0px 0px 10px  white , 0px 0px 15px  lightblue !important;">DESARROLLADO POR JON WALTER RECALDE</p>
+        </div>
+
+
+
+
+
+
+
+    </footer>
+
+    <script src="js/main.js "></script>
+    <script src="js/jquery.js "></script>
+    <script src="js/filtro.js "></script>
+
+    <script>
+        function closeModal() {
+
+
+            //  $("#my-modal").addClass("my-modal-oculto");
+
+            document.getElementById("my-modal").style.width = '0px';
+            document.getElementById("my-modal").style.height = '0px';
+            document.getElementById("my-modal").style.visibility = 'hidden';
+
+
+            //  $("#my-modal").css("visibility", "hidden");
+            //  $("#my-modal div").empty();
+            //     $("#my-modal").css("animation", "none");
+        }
+
+        function showModal(e) {
+            document.getElementById("my-modal").style.width = '520px';
+            document.getElementById("my-modal").style.height = '420px';
+            document.getElementById("my-modal").style.visibility = 'visible';
+
+            let img = e.target.cloneNode();
+
+
+            $("#my-modal div").empty();
+
+
+            document.querySelector("#my-modal div").appendChild(img);
+            $("#my-modal").css("visibility", "visible");
+        }
+
+
+
+        window.onload = function(e) {
+            $(".contenedor img, .galeria-work img").click(showModal);
+
+
+        };
+    </script>
+
+</body>
+
+</html>
